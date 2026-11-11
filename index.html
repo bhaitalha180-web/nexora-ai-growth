@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA AI GROWTH</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#070b0a;color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:22px;text-align:center;
+ border-bottom:1px solid #163c2a;
+}
+.logo{color:#39ff88;font-size:27px;font-weight:bold}
+.hero{text-align:center;padding:55px 18px}
+h1{font-size:38px}
+h1 span{color:#39ff88}
+p{color:#b9c8bf;line-height:1.6}
+button{
+ background:#39ff88;color:#06140b;
+ border:0;padding:13px 20px;
+ border-radius:9px;font-weight:bold;
+ cursor:pointer;
+}
+.tools{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:15px;padding:20px;max-width:950px;margin:auto;
+}
+.card{
+ background:#101b15;border:1px solid #225638;
+ border-radius:14px;padding:22px;
+}
+.card h3{color:#39ff88}
+input{
+ width:100%;padding:13px;margin:12px 0;
+ border-radius:8px;border:1px solid #39ff88;
+ background:#07100b;color:white;
+}
+footer{text-align:center;padding:30px;color:#8fa99a}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">NEXORA AI GROWTH</div>
+<p>Smart Tools For TikTok Creators</p>
+</header>
+
+<section class="hero">
+<h1>Grow Your <span>TikTok</span></h1>
+<p>Free tools to create better content and improve your social media growth.</p>
+<button onclick="document.getElementById('tools').scrollIntoView()">Explore Tools</button>
+</section>
+
+<section class="tools" id="tools">
+<div class="card">
+<h3>Hashtag Generator</h3>
+<input id="topic" placeholder="Enter video topic">
+<button onclick="hashtags()">Generate</button>
+<p id="hashResult"></p>
+</div>
+
+<div class="card">
+<h3>Caption Generator</h3>
+<input id="captionTopic" placeholder="Enter video topic">
+<button onclick="captions()">Generate</button>
+<p id="captionResult"></p>
+</div>
+
+<div class="card">
+<h3>Growth Tips</h3>
+<p>Post original videos, use relevant hashtags, create engaging openings and study your audience.</p>
+</div>
+
+<div class="card">
+<h3>Video Ideas</h3>
+<p>Try tutorials, behind-the-scenes videos, educational clips and creative challenges.</p>
+</div>
+</section>
+
+<footer>
+NEXORA AI GROWTH © 2026
+</footer>
+
+<script>
+function hashtags(){
+ let t=document.getElementById('topic').value.trim();
+ if(!t){alert('Enter a topic first');return}
+ let clean=t.replace(/[^a-zA-Z0-9]/g,'');
+ document.getElementById('hashResult').innerText=
+ '#'+clean+' #TikTok #ContentCreator #ForYou #VideoIdeas';
+}
+function captions(){
+ let t=document.getElementById('captionTopic').value.trim();
+ if(!t){alert('Enter a topic first');return}
+ document.getElementById('captionResult').innerText=
+ 'Check out my latest '+t+' video! Follow for more. ✨';
+}
+</script>
+</body>
+  </html>
+  
